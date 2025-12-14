@@ -208,7 +208,7 @@ For testing purposes, the app includes demo credentials:
 ## 🎨 UI/UX Design
 
 Built with Material Design 3 and UMTC branding:
-- **Primary Color**: Red and Maroon
+- **Primary Color**: Maroon (#8B1538)
 - **Secondary Colors**: Gold accents, Light gray backgrounds
 - **Typography**: Responsive layouts for all screen sizes
 ---
@@ -233,6 +233,22 @@ Built with Material Design 3 and UMTC branding:
 - Event popularity tracking
 - Capacity management
 
+### 🔐 Security
+---
+
+## 📊 Project Information
+
+| Aspect | Details |
+|--------|---------|
+| **App Name** | UMTC Events |
+| **Version** | 1.0.0 |
+| **Min Flutter** | 3.10.1 |
+| **Platforms** | Android, iOS, Web |
+| **License** | MIT |
+| **Status** | Active Development |
+
+---
+
 ## 🚀 Roadmap & Future Enhancements
 
 - [ ] 🔔 Push Notifications for upcoming events
@@ -245,6 +261,8 @@ Built with Material Design 3 and UMTC branding:
 - [ ] 🌐 Multi-language support (Filipino, English)
 - [ ] 🗺️ Event location map view
 - [ ] 🎫 Ticketing system integration
+
+---
 
 ## 🤝 Contributing
 
@@ -283,10 +301,26 @@ We welcome contributions! Here's how you can help:
 
 ---
 
+## 📄 License
+
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 📧 Support & Contact
+
+- **Issues**: [GitHub Issues](https://github.com/yourusername/cce106_app/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/yourusername/cce106_app/discussions)
+- **Email**: support@umtc-events.dev
+
+---
+
 ## 🙏 Acknowledgments
 
 - University of Mindanao Tagum College for the inspiration
 - Flutter & Firebase communities
+- All contributors and testers
+
 ---
 
 <div align="center">
@@ -311,3 +345,13 @@ We welcome contributions! Here's how you can help:
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Support
+
+For support or questions, please contact:
+- Email: support@umtc.edu.ph
+- Campus IT Department
+- Computer Science Department
