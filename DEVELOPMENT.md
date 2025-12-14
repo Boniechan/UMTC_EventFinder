@@ -238,13 +238,5 @@ Stream<List<EventModel>> getUserRSVPEvents()
 3. Performance monitoring
 4. User engagement metrics
 
-## Contact Information
-
-For development support:
-- Lead Developer: [Your Name]
-- Project Manager: [PM Name]
-- UMTC IT Department: [Contact]
-
----
 
 **Note**: This app represents a complete campus event management solution. The codebase is well-structured and ready for production with proper Firebase configuration.
