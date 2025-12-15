@@ -4,6 +4,7 @@ import 'package:intl/intl.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import '../models/event_model.dart';
 import '../providers/event_provider.dart';
+import '../screens/student_event_details_screen.dart';
 
 class EventCard extends StatelessWidget {
   final EventModel event;
@@ -205,32 +206,53 @@ class EventCard extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
 
-                // RSVP button
-                SizedBox(
-                  width: double.infinity,
-                  child: ElevatedButton(
-                    onPressed: event.isFull && !hasRSVPd
-                        ? null
-                        : () => _handleRSVP(context),
-                    style: ElevatedButton.styleFrom(
-                      backgroundColor: hasRSVPd
-                          ? Colors.green
-                          : const Color(0xFF8B1538),
-                      foregroundColor: Colors.white,
-                      padding: const EdgeInsets.symmetric(vertical: 12),
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(8),
+                // View Details and RSVP buttons
+                Row(
+                  children: [
+                    Expanded(
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  StudentEventDetailsScreen(event: event),
+                            ),
+                          );
+                        },
+                        icon: const Icon(Icons.visibility),
+                        label: const Text('Details'),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Colors.grey[600],
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
                       ),
                     ),
-                    child: Text(
-                      hasRSVPd
-                          ? 'RSVP\'d'
-                          : event.isFull
-                          ? '50 capacity'
-                          : 'RSVP Now',
-                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    const SizedBox(width: 12),
+                    Expanded(
+                      child: ElevatedButton(
+                        onPressed: event.isFull && !hasRSVPd
+                            ? null
+                            : () => _handleRSVP(context),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF8B1538),
+                          foregroundColor: Colors.white,
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                        child: const Text(
+                          'RSVP Now',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ),
                     ),
-                  ),
+                  ],
                 ),
               ],
             ),

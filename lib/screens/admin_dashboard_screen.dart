@@ -5,6 +5,7 @@ import '../providers/auth_provider.dart';
 import '../providers/event_provider.dart';
 import '../models/event_model.dart';
 import 'create_event_screen.dart';
+import 'event_analytics_screen.dart';
 
 class AdminDashboardScreen extends StatefulWidget {
   const AdminDashboardScreen({super.key});
@@ -560,7 +561,13 @@ class _AdminDashboardScreenState extends State<AdminDashboardScreen> {
                     IconButton(
                       icon: const Icon(Icons.visibility, color: Colors.blue),
                       onPressed: () {
-                        // View event details
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                EventAnalyticsScreen(event: event),
+                          ),
+                        );
                       },
                     ),
                     IconButton(
